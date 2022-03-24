@@ -1,0 +1,6 @@
+Create Ramdisk directory as root 
+mkdir /mnt/ramdisk
+
+# Ramdisk für Verschiedenes:200 MB
+tmpfs /mnt/ramdisk tmpfs defaults,size=128M 0 0
+
