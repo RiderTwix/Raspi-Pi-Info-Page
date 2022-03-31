@@ -49,8 +49,8 @@ while true; do
 	echo "</network_wireguard>" >> $file
 
 	# Netzwerktraffix am Ethernet Interface
-        networkdata_eth0_Bytes_RX=$(ifconfig eth0 | grep "RX" | grep "RX" | head -1 | awk '{print $5}')
-        networkdata_eth0_Bytes_TX=$(ifconfig eth0 | grep "TX" | grep "TX" | head -1 | awk '{print $5}')
+        networkdata_eth0_Bytes_RX=$(ifconfig eth0 | grep "RX" | head -1 | awk '{print $5}')
+        networkdata_eth0_Bytes_TX=$(ifconfig eth0 | grep "TX" | head -1 | awk '{print $5}')
 	echo "<network_eth0>" >> $file 
 	echo "RX_Data_Bytes: $networkdata_eth0_Bytes_RX" >> $file
 	echo "TX_Data_Bytes: $networkdata_eth0_Bytes_TX" >> $file
